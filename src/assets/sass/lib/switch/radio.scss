@@ -1,0 +1,103 @@
+.onoffswitch {
+  //position: relative;
+  width: 100px;
+  height: 52px;
+  display: inline-block;
+}
+
+.onoffswitch-checkbox {
+  display: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0px solid #999999;
+  border-radius: 0px;
+  width: 100px;
+  height: 100px;
+}
+
+.onoffswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner > div {
+  float: left;
+  position: relative;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.onoffswitch-inner .onoffswitch-active {
+  padding-left: 15px;
+  background-color: #c2c2c2;
+  color: #ffffff;
+}
+
+.onoffswitch-inner .onoffswitch-inactive {
+  padding-right: 15px;
+  background-color: #c2c2c2;
+  color: #ffffff;
+  text-align: right;
+}
+
+.onoffswitch-switch {
+  width: 40px;
+  margin: 0px;
+  text-align: center;
+  border: 0px solid #999999;
+  border-radius: 0px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.onoffswitch-active .onoffswitch-switch {
+  background: #27a1ca;
+  left: 0;
+}
+
+.onoffswitch-inactive .onoffswitch-switch {
+  background: #a1a1a1;
+  right: 0;
+}
+
+.onoffswitch-active .onoffswitch-switch:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 40px;
+  border-style: solid;
+  border-color: #27a1ca transparent transparent #27a1ca;
+  border-width: 15px 10px;
+}
+
+.onoffswitch-inactive .onoffswitch-switch:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 40px;
+  border-style: solid;
+  border-color: transparent #a1a1a1 #a1a1a1 transparent;
+  border-width: 15px 10px;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
